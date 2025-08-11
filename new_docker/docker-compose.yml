@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  container:
+    image: docker_test:mydocker
+    command: python final_task2.py
+    volumes: 
+      - ~/Docker_test/new_docker:/app
+    environment:
+      MPLBACKEND: 'Agg'
+    
