@@ -16,17 +16,22 @@ sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
-Добавльте репозиторий Docker в источники Apt с помощью команд :
+Добавьте репозиторий Docker в источники Apt с помощью команд :
 ```bash 
 echo \ "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \ 
 sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
-Обновление индекса пакетов с помощью команды sudo apt-get update:
+Обновите индекс пакетов с помощью команды
+```bash
+sudo apt-get update:
+```
 Результат последовательного выполнения команд представлен на рисунке 1.
 
+
 Рисунок 1 Подготовка к установке docker
-Выполним установку docker. Для этого введем команду 
+Выполним установку docker. 
+Для этого введем команду 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin. 
 Результат выполнения команды представлен на рисунке 2
 Рисунок  2 . Процесс установки docker
