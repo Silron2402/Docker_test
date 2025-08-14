@@ -3,9 +3,13 @@
 
 ### Для подготовки к установке Docker необходимо выполнить следующие действия:
  Обновите индекса пакетов с помощью команды 
- bash '''sudo apt-get update '''
+ '''
+ bash sudo apt-get update
+ '''
  Выполните установку пакетов с помощью команды
+ '''bash
  sudo apt-get install ca-certificates curl gnupg
+ '''
 Добавление GPG-ключа в Docker с помощью команд:
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
